@@ -80,7 +80,7 @@ public:
 		use_rnn_pose = true;
 		RNN_cam = SE3(Sophus::Quaterniond(pose[0], pose[1], pose[2], pose[3]),
 					  Vec3(pose[4], pose[5], pose[6]));
-		RNN_cam = RNN_cam.inverse();
+		// RNN_cam = RNN_cam.inverse();
 	}
 };
 

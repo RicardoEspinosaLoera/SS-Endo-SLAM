@@ -1011,6 +1011,7 @@ float FullSystem::callAndReadRNN(ImageAndExposure* image, bool update, FrameHess
 	if(fh!=NULL){
 		float* depth = NULL;
 		depth = readRNNDepth(image, reader, rnncache);
+		std::cout << pose[0]<< ","<< pose[1]<< ","<< pose[2] << ","<< pose[3] << ","<< 	pose[4] << ","<< pose[5]<< ","<< pose[6]<< ","<< pose[7] << "\n";
 		fh->shell->set_RNNcamPrediction(pose);
 		fh->makeDepths(depth);
 		delete[] depth;
